@@ -8,7 +8,7 @@ void MyGlDraw(void)
 	//*************************************************************************
 
     //Exemplo I
-/*
+    /*
     TypeColor c1, c2, c3 , c4, c5, c6, c7;
 
     //-----------------
@@ -99,17 +99,12 @@ void MyGlDraw(void)
         }
     }
     */
-    /*
-    PutPixel(p1);
-    PutPixel(p2);
-    PutPixel(p3);
-
 
     //**********************************************************************
 
     //Exemplo II
 
-/*
+    /*
     TypeColor c1, c2, c3;
     c1.R = 255;
     c1.G = 0;
@@ -181,10 +176,13 @@ void MyGlDraw(void)
     DrawLine(p7, p2);
     DrawLine(p8, p2);
     DrawLine(p9, p2);
+    */
 
-
-
-    // TypeColor c1, c2, c3, c4, c5, c6, c7;
+    //****************************************************
+    // Criando uma Estrela
+    //****************************************************
+    /*
+    TypeColor c1, c2, c3, c4, c5, c6, c7;
     c1.R = 255;
     c1.G = 0;
     c1.B = 0;
@@ -220,8 +218,7 @@ void MyGlDraw(void)
     c7.B = 0;
     c7.A = 0;
 
-  //  TypePixel p1, p2, p3, p4, p5, p6, p7, p8, p9, p10;
-    //Formando um X
+    TypePixel p1, p2, p3, p4, p5, p6, p7, p8, p9, p10;
     p1.pX = 0;
     p1.pY = 0;
     p1.color = c1;
@@ -244,7 +241,6 @@ void MyGlDraw(void)
 
     //----------------
 
-    //Formando um +
     p6.pX = 0;
     p6.pY = IMAGE_WIDTH/3;
     p6.color = c6;
@@ -262,10 +258,6 @@ void MyGlDraw(void)
     p9.color = c5;
     //-----------------
 
-    p10.pX = 250;
-    p10.pY = 250;
-    p10.color = c1;
-
     //DrawLine(p1, p2);//Primeira
     //DrawLine(p3, p2);//Segunda
     DrawLine(p4, p2);//Terceira
@@ -281,54 +273,9 @@ void MyGlDraw(void)
     DrawLine(p6, p5);
     DrawLine(p5, p7);
     DrawLine(p6, p8);
+    */
+    //************************************
 
-    //int cont = 1, inverte = 0;
-    for(int i = 0; i < IMAGE_HEIGHT; i++){
-        p10.pY = i;
-        for(int j = 0; j < IMAGE_WIDTH; j++){
-            p10.pX = j;
-            if((p10.color.R == 0.0)&&(p10.color.G == 0.0)&&(p10.color.B == 0.0)&&(p10.color.A == 0.0)){
-                if(inverte == 0){
-                    p10.color = c7;
-                    PutPixel(p10);
-                }else{
-                    PutPixel(p1);
-                }
-            }
-            if((p10.color.R != 0.0)&&(p10.color.G != 0.0)&&(p10.color.B != 0.0)&&(p10.color.A != 0.0)){
-                cont++;
-                if(cont == 1){
-                    p10.color = c1;
-                    PutPixel(p1);
-                    inverte = 1;
-                }else{
-                    PutPixel(p10);
-                    cont = 0;
-                    inverte = 0;
-                }
-            }
-            /*
-            switch(cont){
-                case 1:
-                    p1.color = c1;
-                    PutPixel(p1);
-                    cont++;
-                    break;
-                case 2:
-                    p1.color = c2;
-                    PutPixel(p1);
-                    cont++;
-                    break;
-                case 3:
-                    p1.color = c3;
-                    PutPixel(p1);
-                    cont = 1;
-                    break;
-            }
-
-        }
-    }
-/*
     /*
     TypePixel p1,p2;
     p1.color = c1;
@@ -353,7 +300,7 @@ void MyGlDraw(void)
     //******************************************
 
     //Exemplo III
-
+    /*
     TypeColor c1, c2, c3, c4, c5, c6;
     c1.R = 0;
     c1.G = 50;
@@ -409,13 +356,15 @@ void MyGlDraw(void)
     p6.pX = 512;
     p6.pY = 512;
     p6.color = c1;
-
+    */
+    //------Ex3.1---Normal-------
+    /*
     DrawTriangle(p1, p2, p3);
-    //DrawTriangle(p1, p5, p6);
-    DrawLine(p1,p6);
+    DrawTriangle(p1, p5, p6);
     DrawTriangle(p6, p2, p3);
+    */
 
-
+    //-----Ex3.2---Color---------
     /*
     for(int i = 0; i < 30; i++){
         DrawTriangleColor(p1, p2, p3);

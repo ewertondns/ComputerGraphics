@@ -9,7 +9,7 @@
 
 
 //******************************************************************************************************************
-//Definindo um estrutura que receberá valores de uma cor e após definiremos o pixel da tela que receberá essa cor
+//Definindo um estrutura que receberá valores de uma cor e após isso definiremos o pixel da tela que receberá essa cor
 //******************************************************************************************************************
 
 //Definindo uma struct para o sistema RGBA
@@ -21,7 +21,7 @@ float A;
 }TypeColor;
 
 //Partindo das cores, agora vamos achar um pixel na tela.
-//Depois disso vamos definir qual a cor desse pixel.
+//Depois disso vamos definir qual a cor que esse pixel vai receber.
 typedef struct{
 int pX;
 int pY;
@@ -29,8 +29,6 @@ TypeColor color;
 }TypePixel;
 
 //*******************************************************************************************************************
-//*******************************************************************************************************************
-
 
 //Definimos aqui uma função que vai colorir um determinado pixel
 void PutPixel(TypePixel p){
@@ -53,6 +51,7 @@ void DrawLine(TypePixel p1, TypePixel p2){
     int dY = (p2.pY - p1.pY);
     int nAux, x, y, tX = 1, tY = 1, cont;
 
+    //Aqui é onde verificamos se os deltas são negativos e fazemos a correção
     if(dX < 0){
         tX = -tX;
     }
@@ -63,7 +62,7 @@ void DrawLine(TypePixel p1, TypePixel p2){
     dX = abs(dX);
     dY = abs(dY);
 
-    //Agora vamos definir auxiliares para o pontos X e Y do Pixel inicial
+    //Agora vamos definir auxiliares para os pontos X e Y do Pixel inicial
     x = p1.pX;
     y = p1.pY;
 
@@ -80,7 +79,7 @@ void DrawLine(TypePixel p1, TypePixel p2){
     //----------------------------------------------
 
     if(dX > dY){
-        nAux = (dY << 1) - dX;
+        nAux = (dY << 1) - dX;//Movemos então os bits uma vez para a esquerda e subtraimos o dX
         fR /= dX; fG /= dX; fB /= dX; fA /= dX;//Aqui é onde começa a interpolação das cores nas linhas
         for(cont = 0; cont < dX; cont++){
             //Interpolando as cores
@@ -91,7 +90,7 @@ void DrawLine(TypePixel p1, TypePixel p2){
             //---------------------
             aux.pX = x;
             aux.pY = y;
-            PutPixel(aux);
+            PutPixel(aux);//Adicionando o novo pixel para formação da linha
             if(nAux < 0){
                 nAux += (dY << 1);
             }else{
