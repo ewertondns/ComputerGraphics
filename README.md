@@ -1,1 +1,1 @@
-<h1>Computer Graphics</h1> 
+<h1>ComputerGraphics</h1> 
