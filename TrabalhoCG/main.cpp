@@ -103,7 +103,6 @@ void MyGlDraw(void)
     //**********************************************************************
 
     //Exemplo II
-
     /*
     TypeColor c1, c2, c3;
     c1.R = 255;
@@ -276,29 +275,6 @@ void MyGlDraw(void)
     */
     //************************************
 
-    /*
-    TypePixel p1,p2;
-    p1.color = c1;
-    p2.color = c3;
-
-    for(int i = 2; i < IMAGE_HEIGHT; ++i){
-        p1.pX = 0;
-        p1.pY = i;
-        p2.pX = IMAGE_WIDTH;
-        p2.pY = i;
-		DrawLine(p1, p2);
-	}
-
-	p1.pX = (IMAGE_WIDTH/3);
-	p1.pY = (IMAGE_HEIGHT * 2/3);
-	p2.pX = (IMAGE_WIDTH * 2/3);
-	p2.pY = (IMAGE_HEIGHT / 3);
-
-	DrawLine(p1, p2);
-	*/
-
-    //******************************************
-
     //Exemplo III
     /*
     TypeColor c1, c2, c3, c4, c5, c6;
@@ -378,12 +354,12 @@ void MyGlDraw(void)
 
     for(int i = 0; i < 50; i++){
         DrawTriangleColor(p4, p5, p6);
-        p4.pX += 5;
-        p4.pY += 5;
-        p5.pX += 5;
-        p5.pY += 5;
-        p6.pX += 5;
-        p6.pY += 5;
+        p4.pX += 2;
+        p4.pY += 2;
+        p5.pX += 2;
+        p5.pY += 2;
+        p6.pX += 2;
+        p6.pY += 2;
     }
     */
 
