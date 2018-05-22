@@ -2,17 +2,6 @@
 No 1º trabalho, foi proposto pelo professor Christian Azambuja Pagot a criação de três funções PutPixel, DrawLine e DrawTriangle, elas nos auxiliavam em rasterizavar as linhas na tela de acordo com primitivas que passávamos para o programa.
 Nessa 2º tarefa, o objetivo era pegar os vértices no espaço do objeto, e por meio das transformações que vamos ver mais a frente, levar eles para o espaço da tela. Para exemplificação do funcionamento do Pipeline, nos foi pedido que carregássemos a Suzanne, um modelo padrão do blender, que o arquivo obj nos foi dado pelo professor para que, através de algum loader, carregamos seus vértices e usassemos o nosso pipeline, o imprimisse na tela, com auxílio do que foi desenvolvido no primeiro trabalho.
 
-## Bibliotecas Utilizadas
- - glm : Foi usado na manipulação de todo o nosso pipeline
- - glut : Nos serviu para criar um ambiente propício ao desenvolvimento gráfico
- - Obj-Loader : Loader fornecido pelo professor para carregar o arquivo .obj
- 
- ## Material Utilizado
- - Slides da aula fornecido no SIGAA da disciplina
- - Conteúdos ministrados em sala
- - Trechos do livro do Foley também fornecido no SIGAA da disciplina
- 
-
 # Bases Teóricas/Praticas
 Faremos aqui transformações geométricas para que possamos matematicamente passar nossa modelagem no espaço do universo até o espaço da tela, usando:
 
